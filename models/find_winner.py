@@ -1,4 +1,5 @@
 from models.player import Player
+import random
 
 # player1 = Player("Bill", "rock")
 # player2 = Player("Tom", "paper")
@@ -23,6 +24,11 @@ def play(player1, player2):
             return player1
         else:
             return player2
+        
+def generate_choice():
+    choices=["rock", "paper", "scissors"]
+    choice=choices[random.randint(0,2)]
+    return choice
 
     
     
