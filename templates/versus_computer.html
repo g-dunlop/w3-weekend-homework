@@ -2,21 +2,27 @@
 
 {% block content %}
 
-<form action="/game_1p" method ='post'>
-    <h2>Player 1</h2>
-    <label for ="p1name">Name:</label>
-    <input type="text" name="p1name">
-    <label for = "choice">Choice:</label>
- 
-    <input list="rps" name="p1choice" autocomplete="off">
-    <datalist id="rps">
-        <option value="rock"></option>
-        <option value="paper"></option>
-        <option value="scissors"></option>
-    </datalist>
-
-    <input type="submit" value="confirm">
-</form>
+<div class="play-box">
+    <form action="/game_1p" method ='post'>
+        <h2>Player 1</h2>
+        <div class="game-box">
+            <label for ="p1name">Name: </label>
+            <input type="text" name="p1name">
+        </div>
+        
+        <div class="game-box">
+            <label for = "choice">Choice:</label>
+            <input list="rps" name="p1choice" autocomplete="off">
+            <datalist id="rps">
+                <option value="rock"></option>
+                <option value="paper"></option>
+                <option value="scissors"></option>
+            </datalist>
+        </div>
+        <br>
+        <input class="submit" type="submit" value="confirm">
+    </form>
+</div>
 
 
 

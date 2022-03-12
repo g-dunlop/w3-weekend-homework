@@ -1,0 +1,202 @@
+/* base styling */
+
+/* Global */
+*{
+    margin:0;
+    padding:0%;
+    border-style:border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body{
+    width:100%;  
+    height:100vh; 
+    background-image: url("img/image.jpeg");
+    background-size:cover;
+}
+
+h2{
+    color:#acc6f8;
+    margin:1rem;
+}
+
+/* navbar */
+.nav-list{
+    list-style:none;
+    display:flex;
+    padding:1rem;
+    margin:0;
+}
+
+.nav-list > li{
+    flex:25%;
+    text-align:center; 
+}
+
+.nav-list > li > a{
+    text-decoration:none;
+    color:#f556f5;
+}
+
+.nav-list > li > a:hover{
+    font-weight:bold;
+}
+
+hr{
+    color:grey;
+    border:1px dotted grey;
+}
+
+
+/* main part */
+
+main{
+    text-align:center;
+}
+
+main > .main-title{
+    margin:2rem;
+    color:#78c7f5;
+}
+
+/* index styling */
+
+/* main > .play-title{
+    color:#36486b;
+    margin:1rem;
+} */
+
+main > .play-box{
+    padding:2rem;
+    /* background-color:#618685; */
+    display:flex;
+    justify-content:center;
+}
+
+main > .play-box > h3{
+    width:200px;
+    flex:50%;
+   
+}
+
+main > .play-box > h3 > a{
+    text-decoration:none;
+    color:white;
+    padding:1rem;
+    background-color:#f556f5;
+    border: 1px solid white;
+    border-radius:10px;
+    width:100%;
+}
+
+main > .play-box > h3 > a:hover{
+    background-color:yellow;
+    color:#f556f5;
+}
+
+main > .play-box > form {
+    background-color:rgba(104, 180, 231, 0.8);
+    padding:2rem;
+    border-radius:5px;
+    text-align:center;
+}
+
+main > .play-box > form > h2 {
+    color:white;
+}
+
+main > .play-box > form > label{
+    color:white;
+   
+}
+
+main > .play-box > form > .submit{
+    margin:1rem 0 0 0;
+    padding:0.5rem;
+    width:10rem;
+    border-radius:5px;
+    background-color:#f556f5;
+    color:white;
+    text-transform:capitalize;
+}
+
+main > .play-box > form > .submit:hover{
+    font-weight:bold;
+}
+
+main > .play-box > form > .game-box{
+    display:flex;
+    justify-content:space-between;
+    padding:1rem 0 0 0;
+    color:white;
+}
+
+
+/* Game styling */
+p {
+    color:white;
+    padding:1rem;
+    border: 1px solid white;
+    background-color:rgb(252, 96, 244);
+    width:300px;
+    height:auto;
+    font-size:1.2rem;
+    text-align:left;
+}
+
+span {
+color:blue;
+font-size:1.2rem;
+font-weight:bold;
+}
+
+.score-board, .choices{
+    display:flex;
+    justify-content:space-between;
+}
+
+.results{
+    text-align:center;
+    width:100%;
+    justify-content:center;
+}
+
+ .results-title{
+    color:white;
+    padding:1rem;
+    text-decoration:underline;
+    font-size:1.5rem;
+}
+
+.results-box{
+    background-color:rgba(104, 180, 231, 0.8);
+    padding:2rem;
+    border-radius:5px;
+    text-align:center;
+}
+
+.play-box > .results-box > h2 > a{
+    text-decoration:none;
+    color:yellow;
+}
+
+.play-box > .results-box > h2 > a:hover{
+    text-decoration:underline;
+}
+
+.play-box > .instructions{
+    background-color:rgba(104, 180, 231, 0.8);
+    padding:2rem;
+    border-radius:5px;
+    text-align:center;
+}
+
+.play-box > .instructions > ol > li{
+    color:white;
+    padding:1rem;
+    text-align:left;
+}
+
+.play-box > .instructions > h2{
+    color:white;
+}

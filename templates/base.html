@@ -1,18 +1,29 @@
 <html>
     <head>
         <title> {{title}} -My Events </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <ul>
+        <ul class="nav-list">
             <li>
                 <a href = "/">Home</a>
+            </li>
+            <li>
                 <a href = "/welcome">Welcome</a>
             </li>
-            <hr>
-           
+            
+            <li>
+                <a href = "/versus_computer">1 Player</a>
+            </li>
+            <li>
+                <a href = "/two_player">2 Player</a>
+            </li>
         </ul>
-        
-        <h1>Rock, Paper, Scissors:</h1>
+        <hr>
+        <main>
+        <h1 class="main-title">Rock, Paper, Scissors!</h1>
         {% block content %} {% endblock %}
+        </main>
+        
     </body>
 </html>

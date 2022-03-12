@@ -2,16 +2,35 @@
 
 {% block content %}
 
-<p>{{player1.name}} chose {{player1.choice}}</p>
-<p>{{player2.name}} chose {{player2.choice}}</p>
+<div class="play-box">
+    <div class="results-box">
+        <h3 class="results-title">Score</h3>
+        <div class="score-board">
+            
+            <p>{{player1.name}}: <span>{{player1.score}}</span></p> 
+            <p>{{player2.name}}: <span>{{player2.score}}</span> </p>
+        </div>
+
+        <h3 class="results-title">Choices</h3>
+        <div class="choices">
+        
+            <p>{{player1.name}} chose <span>{{player1.choice}}</span></p>
+            <p>{{player2.name}} chose <span>{{player2.choice}}</span></p>
+        </div>
+
+        <h3 class="results-title">Results</h3>
+        <div class="results">
+            
+            
+            {% if winner == None %}<p><span>{{winner}}</span></p>
+            {%else%}
+            <p><span>{{winner.name}}</span> won the game with {{winner.choice}}</p>
+            {%endif%}
+        </div>
 
 
-<p>The winner is...</p>
-{% if winner == None %}<span>{{winner}}</span>
-{%else%}
-<p>{{winner.name}} won the game with {{winner.choice}}</p>
-{%endif%}
-
-<!-- play again track score -->
-
+                <!-- play again track score -->
+        <h2><a href="two_player">Play Again</a></h2>
+    </div>
+</div>
 {% endblock %}

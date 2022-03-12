@@ -33,15 +33,16 @@ def play_game():
     player1 = Player(player1_name, player1_choice)
     player2 = Player(player2_name, player2_choice)
     winner = play(player1, player2)
+    increase_score(winner, player1, player2)
     return render_template("game.html", title='winner', winner=winner, player1=player1, player2=player2)
 
 @app.route('/game_1p', methods = ['POST'])
 def play_game_1p():
     player1_name = request.form["p1name"]
     player1_choice = request.form["p1choice"]
-    player2_name = "The computer"
-    player2_choice = generate_choice()
+    player2 = generate_computer_player()
     player1 = Player(player1_name, player1_choice)
-    player2 = Player(player2_name, player2_choice)
     winner = play(player1, player2)
+    increase_score(winner, player1, player2)
+    
     return render_template("game_1p.html", title="winner", winner=winner, player1=player1, player2=player2)

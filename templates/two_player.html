@@ -2,34 +2,43 @@
 
 {% block content %}
 
+<div class="play-box">
+    
+    <form action="/game" method ='post'>
+      
+            <h2>Player 1</h2>
+            <label for ="p1name">Name:</label>
+            <input type="text" name="p1name">
+            <label for = "choice">Choice:</label>
+        
+            <input list="rps" name="p1choice" autocomplete="off">
+            <datalist id="rps">
+                <option value="rock"></option>
+                <option value="paper"></option>
+                <option value="scissors"></option>
+            </datalist>
+        
 
-<form action="/game" method ='post'>
-    <h2>Player 1</h2>
-    <label for ="p1name">Name:</label>
-    <input type="text" name="p1name">
-    <label for = "choice">Choice:</label>
- 
-    <input list="rps" name="p1choice" autocomplete="off">
-    <datalist id="rps">
-        <option value="rock"></option>
-        <option value="paper"></option>
-        <option value="scissors"></option>
-    </datalist>
+       
+            <h2>Player 2</h2>
+            <label for ="p2name">Name:</label>
+            <input type="text" name="p2name">
+            <label for = "choice">Choice:</label>
 
-    <h2>Player 2</h2>
-    <label for ="p2name">Name:</label>
-    <input type="text" name="p2name">
-    <label for = "choice">Choice:</label>
+            <input list="rps" name="p2choice" autocomplete="off">
+            <datalist id="rps">
+                <option value="rock"></option>
+                <option value="paper"></option>
+                <option value="scissors"></option>
+            </datalist>
+       
+            <br>
+        <input class="submit" type="submit" value="confirm">
+    </form>
+     
+</div>
 
-    <input list="rps" name="p2choice" autocomplete="off">
-    <datalist id="rps">
-        <option value="rock"></option>
-        <option value="paper"></option>
-        <option value="scissors"></option>
-    </datalist>
 
-    <input type="submit" value="confirm">
-</form>
 
    
 {% endblock %}
